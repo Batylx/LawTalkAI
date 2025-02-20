@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import openai
 
-app = Flask(__name__)
+app = Flask(__LawTalkAI__)
 openai.api_key = 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
 
 @app.route("/chat", methods=["GET"])
