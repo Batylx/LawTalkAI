@@ -16,5 +16,5 @@ def chat_with_ai():
         return jsonify(response.choices[0].text.strip())
     return jsonify({"message": "Please provide a query."})
 
-if __name__ == "__main__":
+if __LawTalkAI__ == "__main__":
     app.run(debug=True)
