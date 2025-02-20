@@ -94,44 +94,5 @@ def integrate_google_docs(document_id):
 
     return document
 
-    import React, { useState } from 'react';
 
-const UploadForm = () => {
-    const [file, setFile] = useState(null);
-    const [report, setReport] = useState(null);
-
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]);
-    }
-
-    const handleUpload = async () => {
-        const formData = new FormData();
-        formData.append('file', file);
-
-        const response = await fetch('http://localhost:5000/upload', {
-            method: 'POST',
-            body: formData
-        });
-
-        const result = await response.json();
-        setReport(result);
-    }
-
-    return (
-        <div>
-            <h1>Upload Umowy</h1>
-            <input type="file" onChange={handleFileChange} />
-            <button onClick={handleUpload}>Prześlij</button>
-
-            {report && (
-                <div>
-                    <h2>Wyniki analizy:</h2>
-                    <pre>{JSON.stringify(report, null, 2)}</pre>
-                </div>
-            )}
-        </div>
-    );
-}
-
-export default UploadForm;
 
